@@ -8,12 +8,12 @@ def greeting():
     return 'Hello world!'
 
 @app.route("/calculator/add", methods=['POST'])
-def add():
-    return 'result-of-the-summation'
+def add(first, second):
+    return first + second
 
 @app.route("/calculator/subtract", methods=['POST'])
-def subtract():
-    return 'result-of-the-subtraction'
+def subtract(first, second):
+    return first - second
 
 if __name__ == '__main__':
     app.run(port=8080,host='0.0.0.0')
